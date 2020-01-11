@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w6M-G4-Foc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="rXp-Gm-pCs">
+            <objects>
+                <viewController id="w6M-G4-Foc" customClass="ViewController" customModule="Day1_StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5f9-1v-SmN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="07d-No-wKM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UA-X4-Mav">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIa-TS-vZC">
+                                                <rect key="frame" x="54.5" y="112" width="266" height="109.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="80"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8I8-kY-5lr">
+                                                <rect key="frame" x="282" y="40" width="53" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                <state key="normal" title="reset">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="resetAction:" destination="w6M-G4-Foc" eventType="touchUpInside" id="kQo-SJ-l4B"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.061239697039999999" green="0.050646893679999999" blue="0.18834945559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="OIa-TS-vZC" firstAttribute="centerY" secondItem="1UA-X4-Mav" secondAttribute="centerY" id="JR9-EI-UyZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="8I8-kY-5lr" secondAttribute="trailing" constant="40" id="i4g-mX-d65"/>
+                                            <constraint firstItem="OIa-TS-vZC" firstAttribute="centerX" secondItem="1UA-X4-Mav" secondAttribute="centerX" id="j0w-Kd-vAR"/>
+                                            <constraint firstItem="8I8-kY-5lr" firstAttribute="top" secondItem="1UA-X4-Mav" secondAttribute="top" constant="40" id="l7s-E6-FaL"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bov-3m-u17">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gff-sM-iSQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="333.5"/>
+                                                <color key="backgroundColor" red="0.43292350210000002" green="0.85790767769999998" blue="0.265610018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" image="play"/>
+                                                <connections>
+                                                    <action selector="startAction:" destination="w6M-G4-Foc" eventType="touchUpInside" id="gAS-xz-OEY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ5-uK-PwC">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="333.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="pause"/>
+                                                <connections>
+                                                    <action selector="pauseAction:" destination="w6M-G4-Foc" eventType="touchUpInside" id="7jB-Fo-j8f"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="07d-No-wKM" secondAttribute="bottom" id="F50-2C-4Mp"/>
+                            <constraint firstAttribute="trailing" secondItem="07d-No-wKM" secondAttribute="trailing" id="G3R-bT-0nc"/>
+                            <constraint firstItem="07d-No-wKM" firstAttribute="leading" secondItem="5f9-1v-SmN" secondAttribute="leading" id="PMl-MR-4rJ"/>
+                            <constraint firstItem="07d-No-wKM" firstAttribute="top" secondItem="5f9-1v-SmN" secondAttribute="top" id="jCv-Sj-Pm2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JIQ-y4-dhI"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="GJ5-uK-PwC" id="Qso-EH-skj"/>
+                        <outlet property="resetButton" destination="8I8-kY-5lr" id="8U8-Tw-MaF"/>
+                        <outlet property="startButton" destination="Gff-sM-iSQ" id="dDl-UX-wrc"/>
+                        <outlet property="timeLabel" destination="OIa-TS-vZC" id="efL-GJ-wkd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jh9-FL-Onb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="42" height="56"/>
+        <image name="play" width="48" height="61"/>
+    </resources>
+</document>
