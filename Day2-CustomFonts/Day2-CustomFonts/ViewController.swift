@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         "均来源于macOS以及Google Font",
         "这是第二个project，加油嗷",
         "有兴趣的可以关注我的网站和GitHub",
-        "www.ezreal-tian.com && github.com/EzrealTian",
+        "https://ezreal-tian.com && github.com/EzrealTian",
         "会持续更新内容",
         "🐛🐛🐛"
     ]

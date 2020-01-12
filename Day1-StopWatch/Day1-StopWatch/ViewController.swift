@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     @IBAction func startAction(_ sender: Any) {
         startButton.isEnabled = false   //点击之后开始按钮不可用
         pauseButton.isEnabled = true    //暂停按钮可用
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)   //每隔0.01秒执行一次目标函数
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)   //每隔0.1秒执行一次目标函数
         registerBackgroundTask()    //后台任务注册
     }
     
