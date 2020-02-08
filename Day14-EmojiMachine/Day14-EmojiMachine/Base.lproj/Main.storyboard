@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Day14_EmojiMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zeM-Kr-qZr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="El3-g1-bM6">
+                                <rect key="frame" x="0.0" y="298" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="rsL-Vj-EqP"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsF-KR-1uO">
+                                <rect key="frame" x="82" y="628" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.48627450980392156" green="0.9882352941176471" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="k7f-ba-yeG"/>
+                                    <constraint firstAttribute="height" constant="50" id="kVc-id-66o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsS-oo-je0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nh-8U-mmf">
+                                <rect key="frame" x="161.5" y="708" width="91" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zeM-Kr-qZr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4aC-8J-Ixt"/>
+                            <constraint firstAttribute="bottom" secondItem="zeM-Kr-qZr" secondAttribute="bottom" id="ACV-F6-xKo"/>
+                            <constraint firstItem="PsF-KR-1uO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="axm-FL-KB3"/>
+                            <constraint firstItem="El3-g1-bM6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bmX-lV-8xj"/>
+                            <constraint firstItem="El3-g1-bM6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hMq-2H-sJp"/>
+                            <constraint firstItem="7nh-8U-mmf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jeT-5f-OwV"/>
+                            <constraint firstAttribute="trailing" secondItem="El3-g1-bM6" secondAttribute="trailing" id="kWz-VB-gyK"/>
+                            <constraint firstItem="PsF-KR-1uO" firstAttribute="top" secondItem="El3-g1-bM6" secondAttribute="bottom" constant="30" id="kvT-n9-pKd"/>
+                            <constraint firstItem="zeM-Kr-qZr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n0T-yC-Lej"/>
+                            <constraint firstItem="7nh-8U-mmf" firstAttribute="top" secondItem="PsF-KR-1uO" secondAttribute="bottom" constant="30" id="quH-3l-TFI"/>
+                            <constraint firstAttribute="trailing" secondItem="zeM-Kr-qZr" secondAttribute="trailing" id="xAi-CM-0IC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emojiPickerView" destination="El3-g1-bM6" id="DbT-Ko-qHk"/>
+                        <outlet property="playButton" destination="PsF-KR-1uO" id="1gX-ds-sOn"/>
+                        <outlet property="resultLabel" destination="7nh-8U-mmf" id="HcR-R9-V2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1242" height="2208"/>
+    </resources>
+</document>
